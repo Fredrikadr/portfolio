@@ -11,20 +11,19 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <>
-      <Header />
-      <div className="container">
-        <div>
-      <Navigation/>
-      <section className='section'></section>
-      <section className='section'></section>
-      <section className='section'></section>
+    <div>
 
-        </div>
+
+      <Navigation />
+      <div className='container'>
+        <div className='welcome'></div>
+        <section className='section' id="about"></section>
+        <section className='section' id="projects"></section>
+        <section className='section' id="contact"></section>
 
       </div>
-    
-    
-    </>
+    </div>
+
+
   );
 }
