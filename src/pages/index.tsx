@@ -5,6 +5,7 @@ import styles from '@/styles/Home.module.css'
 import { Parallax } from 'react-scroll-parallax'
 import Header from './components/Header'
 import Navigation from './components/Navigation'
+import Welcome from './components/Welcome'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -14,12 +15,19 @@ export default function Home() {
     <div>
 
 
+      <Welcome />
       <Navigation />
       <div className='container'>
-        <div className='welcome'></div>
-        <section className='section' id="about"></section>
-        <section className='section' id="projects"></section>
-        <section className='section' id="contact"></section>
+        <section id="about">
+          <article className='article' ></article>
+        </section>
+        <section id="projects">
+          <article className='article' id="projects"></article>
+        </section>
+        <section id="contact">
+          <article className='article' id="contact"></article>
+
+        </section>
 
       </div>
     </div>
