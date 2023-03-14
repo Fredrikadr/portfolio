@@ -1,0 +1,48 @@
+/* Colors */
+$pink: #e50099;
+$orange: #e1763e;
+$peach: #cf4e44;
+$blue: #4c7a9e;
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  height: 100px;
+  background-color: black;
+}
+
+nav {
+  border: 2px solid $blue;
+  border-radius: 2rem;
+  padding: 20px;
+  width: 40%;
+  margin: 0 auto;
+  position: sticky;
+  top: 100px;
+  z-index: 1;
+
+}
+
+.section {
+
+  min-height: 90vh;
+  min-width: 90%;
+  background-color: rgba(0, 0, 0, 0.781);
+  margin-bottom: 200px;
+}
+
+.container {
+  background-image: url("../images/hexagons.png");
+  background-size: cover;
+  min-height: 100vh;
+  background-attachment: fixed;
+  overflow: hidden;
+
+  
+
+}
