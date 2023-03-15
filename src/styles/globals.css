@@ -5,6 +5,10 @@
   padding: 0;
   font-family: "Kanit", sans-serif;
   font-size: 1.2rem;
+  color: white;
+}
+* h1 {
+  font-size: 2rem;
 }
 
 html {
@@ -17,10 +21,11 @@ header {
 }
 
 nav {
+  color: black;
   display: flex;
   justify-content: space-around;
   background: rgb(225, 118, 62);
-  background: linear-gradient(90deg, rgb(225, 118, 62) 15%, rgb(229, 0, 153) 72%, rgb(76, 122, 158) 100%);
+  background: linear-gradient(90deg, rgb(225, 118, 62) 0%, rgb(229, 0, 153) 82%, rgb(183, 47, 149) 100%);
   box-shadow: 0px 10px 50px;
   border-radius: 2rem;
   padding: 30px;
@@ -31,7 +36,8 @@ nav {
   z-index: 1;
 }
 nav > * {
-  color: black;
+  /*     border: 2px solid black;*/
+  padding: 0 2rem;
   text-decoration: none;
   font-size: 1.7rem;
 }
@@ -44,6 +50,9 @@ nav > *:after {
 nav > *:link {
   text-decoration: none;
 }
+nav > * > * {
+  color: black;
+}
 
 body {
   background-image: url("../images/hexagons.png");
@@ -54,8 +63,27 @@ body {
 }
 
 .welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.932);
+}
+.welcome .text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 30%;
+  line-height: 1.2;
+}
+.welcome .text-container h1:last-child {
+  color: #e50099;
+  font-size: 4rem;
+}
+.welcome h1 {
+  font-size: 3rem;
+  color: white;
+  text-align: center;
 }
 
 section {
@@ -65,15 +93,49 @@ section {
 
 article {
   border-radius: 2rem;
-  min-height: 500px;
+  padding: 3rem;
+  min-height: 70%;
   width: 90%;
   background-color: rgba(0, 0, 0, 0.877);
   margin: 200px auto;
 }
+article.about-me {
+  display: grid;
+  gap: 2rem;
+  grid-template-areas: "picture txt";
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 3fr;
+}
+article.about-me img {
+  grid-area: picture;
+  padding: 1rem;
+  min-width: 100px;
+  border: 1px solid white;
+  border-radius: 2rem;
+}
+article.about-me .text-container {
+  grid-area: txt;
+  max-width: 80%;
+}
 
 button {
-  background-color: #cf4e44;
+  background-color: white;
+  color: black;
   display: block;
-  padding: 1rem 3rem;
+  padding: 1rem 4rem;
   margin: 0 auto;
+  border: none;
+  border-radius: 2rem;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.welcome-motion {
+  color: white;
+  text-align: center;
 }/*# sourceMappingURL=globals.css.map */
