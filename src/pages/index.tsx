@@ -25,9 +25,9 @@ export default function Home() {
               <h1>Fredrik Andersen</h1>
               <p>I&apos;m full stack JavaScript developer with a focus on using the PERN stack. Although I&apos;m new to the field, I have a strong desire to learn and apply new skills to real-world projects.</p>
               <br></br>
-              <p>I&apos;m always expanding my knowledge and skills through online courses, coding challenges, and personal projects. I'm highly motivated, collaborative, and always eager to work with others to find creative solutions to complex problems.</p>
+              <p>I&apos;m always expanding my knowledge and skills through online courses, coding challenges, and personal projects. I&apos;m highly motivated, collaborative, and always eager to work with others to find creative solutions to complex problems.</p>
               <br></br>
-              <p>My ambition is to build a successful career in the tech industry, contributing to the development of innovative products and services that make a positive impact on society. I'm excited about the opportunities that lie ahead and am determined to achieve my goals through hard work, dedication, and a passion for learning.</p>
+              <p>My ambition is to build a successful career in the tech industry, contributing to the development of innovative products and services that make a positive impact on society. I&apos;m excited about the opportunities that lie ahead and am determined to achieve my goals through hard work, dedication, and a passion for learning.</p>
             </div>
           </article>
         </section>
