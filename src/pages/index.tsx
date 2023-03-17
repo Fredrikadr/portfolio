@@ -23,7 +23,7 @@ export default function Home() {
             <Image src="" height={200} width={200} alt="picture of me"></Image>
             <div className='text-container'>
               <h1>Fredrik Andersen</h1>
-              <p>I&apos;m full stack JavaScript developer with a focus on using the PERN stack. Although I&apos;m new to the field, I have a strong desire to learn and apply new skills to real-world projects.</p>
+              <p>I&apos;m a full stack JavaScript developer with a focus on using the PERN stack. Although I&apos;m new to the field, I have a strong desire to learn and apply new skills to real-world projects.</p>
               <br></br>
               <p>I&apos;m always expanding my knowledge and skills through online courses, coding challenges, and personal projects. I&apos;m highly motivated, collaborative, and always eager to work with others to find creative solutions to complex problems.</p>
               <br></br>
