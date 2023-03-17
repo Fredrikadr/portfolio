@@ -20,7 +20,7 @@ export default function Home() {
       <main className='container'>
         <section id="about">
           <article className='about-me' >
-            <img alt="picture of me"></img>
+            <Image src="" height={200} width={200} alt="picture of me"></Image>
             <div className='text-container'>
               <h1>Fredrik Andersen</h1>
               <p>I'm full stack JavaScript developer with a focus on using the PERN stack. Although I'm new to the field, I have a strong desire to learn and apply new skills to real-world projects.</p>
