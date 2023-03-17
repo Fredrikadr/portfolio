@@ -23,7 +23,7 @@ export default function Welcome() {
           initial={{ opacity: 0, y: 500}}
           animate={{ opacity: 1, y: 0}}
           transition={{ delay: 1, duration: 0.7 }}
-          onClick={() => handleLinkClick("about")}>Let's go!</motion.button>
+          onClick={() => handleLinkClick("about")}>Let&apos;s go!</motion.button>
       </div>
 
     </div>
