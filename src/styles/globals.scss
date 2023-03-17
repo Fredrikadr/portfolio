@@ -19,19 +19,29 @@ $gradient2: linear-gradient(90deg, rgba(225, 118, 62, 1) 15%, rgba(229, 0, 153, 
   margin: 0;
   padding: 0;
   font-family: 'Kanit', sans-serif;
-  font-size: 1.2rem;
+  /*   font-size: 1rem; */
+
   color: $fontcolor;
-  h1 {
+
+  /*  h1 {
     font-size: 2rem;
   }
   h2 {
     font-size: 1.5rem;
   }
+ */
+  h1 {
+    color: $peach;
+    margin-bottom: 1rem;
+  }
 
-  h1, h2, h3, h4, h5 {
+  h2,
+  h3,
+  h4,
+  h5 {
     color: white
   }
-  
+
 }
 
 html {
@@ -42,7 +52,7 @@ html {
 nav {
   color: black;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   background: $background1;
   background: $gradient1;
   box-shadow: 0px 10px 50px;
@@ -53,26 +63,30 @@ nav {
   top: 0;
   z-index: 1;
 
+
   &>* {
     /*     border: 2px solid black;*/
     text-decoration: none;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
 
-    &:visited {
+
+    :visited {
       text-decoration: none;
     }
 
-    &:after {
+    :after {
       text-decoration: none;
     }
 
-    &:link {
+    :link {
       text-decoration: none;
     }
 
-    &>* {
+    > * {
       color: black;
     }
+
+
   }
 }
 
@@ -81,13 +95,18 @@ body {
   background-image: url("../images/hexagons.png");
   background-size: cover;
   min-height: 100vh;
-  min-width: 100vw;
   background-attachment: fixed;
   background-position-x: -400px;
 
 }
 
-main {}
+main {
+
+  :last-child {
+    margin-bottom: 0;
+  }
+}
+
 
 .welcome {
   display: flex;
@@ -100,20 +119,20 @@ main {}
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 30%;
+    min-height: 30%;
     line-height: 1.2;
     margin: 0 10%;
 
     h1:last-child {
       color: $pink;
-      font-size: 4rem;
+      font-size: 15vw;
       margin-top: 2rem;
     }
   }
 
 
   h1 {
-    font-size: 3rem;
+    font-size: 10vw;
     color: white;
     text-align: center;
   }
@@ -123,13 +142,17 @@ section {
   padding: 1px 0;
   background-color: rgba(0, 0, 0, 0.877);
   padding-bottom: 4rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 article {
-  padding: 3rem;
   min-height: 70%;
-  margin: 0 auto;
+  margin: 0 10%;
+  padding-top: 3rem;
+
+  h1 {
+    font-size: 2.5rem;
+  }
 
   &.about-me {
     display: grid;
@@ -140,7 +163,7 @@ article {
     grid-template-rows: auto;
 
     img {
-      margin-top: 2rem;
+      margin-top: 3rem;
       grid-area: picture;
       padding: 1rem;
       min-width: 200px;
@@ -160,28 +183,53 @@ article {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     h1 {
       text-align: center;
     }
 
     .project-card {
-      padding: 1rem;
-      border: 1px solid white;
+      /*       padding: 1rem; */
+      /*       border: 1px solid white; */
       border-radius: 2rem;
-      display: flex;
-      flex-direction: column;
-      max-width: 90%;
-      text-align: center;
+      display: grid;
+      justify-content: center;
+      grid-template-areas:
+        "title"
+        "image"
+        "description";
+      grid-template-rows: 2rem 2fr 0.5fr;
+
+      a>span {
+        color: $pink;
+      }
+
+      h2 {
+        grid-area: title;
+        text-align: center;
+        font-size: 1.5rem;
+      }
+
       figure {
         display: flex;
         flex-direction: column;
+        max-width: 600px;
+        grid-area: image;
+      }
+
+      figcaption {
+        border: 1px solid white;
+        border-radius: 1rem;
+        padding: 1rem;
+        grid-area: description;
       }
 
       img {
+        padding: 1rem;
         width: 100%;
+        height: auto;
 
-        object-fit: contain;
-        
+
       }
     }
 
@@ -220,7 +268,7 @@ button {
   margin: 0 auto;
   border: none;
   border-radius: 2rem;
-  font-size: 3rem;
+  font-size: 10vw;
   font-weight: 600;
 
 }
@@ -236,9 +284,32 @@ button {
 }
 
 @media only screen and (min-width: 750px) {
+  * {
+    font-size: 1.2rem;
+  }
+
   body {
     background-position-x: 0;
   }
+
+  .welcome {
+    .text-container {
+
+      h1:last-child {
+        font-size: 7rem;
+      }
+    }
+
+    h1 {
+      font-size: 5rem;
+    }
+
+    button {
+      font-size: 5rem;
+    }
+  }
+
+
 
   nav {
     justify-content: center;
