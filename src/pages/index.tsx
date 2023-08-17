@@ -20,7 +20,6 @@ export default function Home() {
       <main className='container'>
         <section id="about">
           <article className='about-me' >
-            <Image src="" height={200} width={200} alt="picture of me"></Image>
             <div className='text-container'>
               <h1>Fredrik Andersen</h1>
               <p>I&apos;m a full stack JavaScript developer with a focus on using the PERN stack. Although I&apos;m new to the field, I have a strong desire to learn and apply new skills to real-world projects.</p>
@@ -34,6 +33,18 @@ export default function Home() {
         <section id="projects">
           <article className='projects'>
             <h1>Projects</h1>
+            <div className='project-card'>
+              <h2>Coffee Catalog</h2>
+              <figure>
+
+                <Image quality="100" width={500}
+                  height={300} alt="screenshot of quiz app project" src="/images/coffeecatalog.png"></Image>
+                <figcaption>
+                  <p>Full Stack Coffee Catalog created using Vite, Sass and TypeScript.</p>
+                  <a target="blank" href="https://github.com/Fredrikadr/coffee-catalog"><span>Code</span></a>
+                </figcaption>
+              </figure>
+            </div>
             <div className='project-card'>
                 <h2>Quiz App</h2>
               <figure>
