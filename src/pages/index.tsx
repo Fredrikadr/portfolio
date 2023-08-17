@@ -38,10 +38,24 @@ export default function Home() {
               <figure>
 
                 <Image quality="100" width={500}
-                  height={300} alt="screenshot of quiz app project" src="/images/coffeecatalog.png"></Image>
+                  height={300} alt="screenshot of coffee catalog project" src="/images/coffeecatalog.png"></Image>
                 <figcaption>
                   <p>Full Stack Coffee Catalog created using Vite, Sass and TypeScript.</p>
                   <a target="blank" href="https://github.com/Fredrikadr/coffee-catalog"><span>Code</span></a>
+                </figcaption>
+              </figure>
+            </div>
+            <div className='project-card'>
+              <h2>Chatbot</h2>
+              <figure>
+
+                <Image quality="100" width={500}
+                  height={300} alt="screenshot of chatbot project" src="/images/chatbot.png"></Image>
+                <figcaption>
+                  <p>Created using vanilla JS and OpenAI API.</p>
+                  <a target="blank" href="https://chatbot-hs5fvz9v0-fredrikadr.vercel.app/"><span>Live preview</span></a>
+                  <br></br>
+                  <a target="blank" href="https://github.com/Fredrikadr/chatbot"><span>Code</span></a>
                 </figcaption>
               </figure>
             </div>
