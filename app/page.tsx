@@ -1,4 +1,17 @@
 import Image from "next/image";
+import { Octokit, App } from "octokit";
+
+const octokit = new Octokit({});
+
+async function getRepos() {
+  const repos = await octokit.request("GET /users/{owner}/repos", {
+    owner: "fredrikadr",
+    per_page: 3
+  });
+  return repos
+}
+
+console.log(await getRepos())
 
 export default function Home() {
   return (
