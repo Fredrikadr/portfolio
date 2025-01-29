@@ -1,7 +1,9 @@
 import Image from "next/image";
 import { Octokit, App } from "octokit";
 
-const octokit = new Octokit({});
+const octokit = new Octokit({
+  auth: process.env.TOKEN
+});
 
 async function getRepos() {
   const repos = await octokit.request("GET /users/{owner}/repos", {
