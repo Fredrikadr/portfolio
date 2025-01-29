@@ -1,3 +1,4 @@
+import { filterRepos } from "@/utils/repos";
 import Image from "next/image";
 import { Octokit, App } from "octokit";
 
@@ -8,12 +9,15 @@ const octokit = new Octokit({
 async function getRepos() {
   const repos = await octokit.request("GET /users/{owner}/repos", {
     owner: "fredrikadr",
-    per_page: 3
+    /* per_page: 3 */
   });
-  return repos
+  return repos.data;
 }
 
-console.log(await getRepos())
+const repos = await getRepos();
+const filtered = filterRepos(repos, "showcase")
+
+console.log(filtered)
 
 export default function Home() {
   return (
