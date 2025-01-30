@@ -7,11 +7,15 @@ const octokit = new Octokit({
 });
 
 async function getRepos() {
-  const repos = await octokit.request("GET /users/{owner}/repos", {
-    owner: "fredrikadr",
-    /* per_page: 3 */
-  });
-  return repos.data;
+  try {
+    const repos = await octokit.request("GET /users/{owner}/repos", {
+      owner: "fredrikadr",
+    });
+    return repos.data;
+
+  } catch (error: any) {
+    console.error("Error fetching repos. ", error.message);
+  }
 }
 
 const repos = await getRepos();
