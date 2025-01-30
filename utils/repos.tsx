@@ -8,7 +8,7 @@ interface GitHubRepo {
     homepage: string;
 }
 
-interface Repo {
+interface Project {
     name: string;
     description: string | null;
     url: string;
@@ -18,7 +18,7 @@ interface Repo {
     live: string;
 }
 
-export function filterRepos(repos: GitHubRepo[], topic: string): Repo[] {
+export function filterRepos(repos: GitHubRepo[], topic: string): Project[] {
     const filteredRepos = repos.filter((repo) => repo.topics.includes(topic));
 
     const mappedRepos = filteredRepos.map(repo => (
@@ -32,6 +32,6 @@ export function filterRepos(repos: GitHubRepo[], topic: string): Repo[] {
             live: repo.homepage
         }
     ))
-    console.log(mappedRepos)
+
     return mappedRepos;
 }
